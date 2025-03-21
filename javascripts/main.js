@@ -21,14 +21,58 @@ document.addEventListener('DOMContentLoaded', () => {
   const maskImage = document.querySelector('.mask-image');
   const facesContainer = document.querySelector('.faces-container');
   const changerColor = document.querySelector('.changer-color');
+  const mirrorsContainer = document.querySelector('.mirrors-container');
+  const closeSign = document.querySelector('.close-sign');
+  const borderLeft = document.querySelector('.border-left');
+  const borderRight = document.querySelector('.border-right');
   const faces = document.querySelectorAll('.face');
+  const mirrors = document.querySelectorAll('.mirror');
 
   const masks = ['mask.svg', 'mask2.svg', 'mask3.svg'];
   let currentMaskIndex = 0;
+  let currentPage = 0;
+  let gameInterval;
+  let currentMirrorIndex = 0;
+  let isShadowCaught = false;
+
+  function startMirrorGame() {
+    if (gameInterval) clearInterval(gameInterval);
+    currentMirrorIndex = 0;
+    isShadowCaught = false;
+    
+    mirrors.forEach(mirror => {
+      const index = Array.from(mirrors).indexOf(mirror) + 1;
+      mirror.src = `/images/mirror${index}.png`;
+    });
+
+    gameInterval = setInterval(() => {
+      if (isShadowCaught) return;
+
+      if (currentMirrorIndex > 0) {
+        const prevMirror = mirrors[currentMirrorIndex - 1];
+        prevMirror.src = prevMirror.src.replace('Active', '');
+      } else {
+        mirrors[2].src = mirrors[2].src.replace('Active', '');
+      }
+
+      const currentMirror = mirrors[currentMirrorIndex];
+      currentMirror.src = currentMirror.src.replace('.png', 'Active.png');
+
+      currentMirrorIndex = (currentMirrorIndex + 1) % 3;
+    }, 1000);
+  }
+
+  mirrors[2].addEventListener('click', () => {
+    if (currentPage === 2 && !isShadowCaught && mirrors[2].src.includes('Active')) {
+      isShadowCaught = true;
+      clearInterval(gameInterval);
+      mirrors[2].src = '/images/brokenMirror.png';
+    }
+  });
 
   changerColor.addEventListener('click', () => {
     currentMaskIndex = (currentMaskIndex + 1) % masks.length;
-    maskImage.src = `./images/${masks[currentMaskIndex]}`;
+    maskImage.src = `/images/${masks[currentMaskIndex]}`;
   });
 
   faces.forEach(face => {
@@ -84,39 +128,72 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  document.addEventListener('selectstart', (e) => {
-    if (e.target.classList.contains('face')) {
-      e.preventDefault();
-    }
+  document.addEventListener('mousedown', (e) => {
+    if (e.target.classList.contains('face')) e.preventDefault();
   });
+
+  showPage(0);
 
   pageNumbers.forEach((number, index) => {
     number.addEventListener('click', () => {
-
-      pageNumbers.forEach(num => num.style.color = '#888888');
-      number.style.color = '#000000';
-
-
-      if (index === 0) {
-        merrorText.style.display = 'flex';
-        document.querySelector('.subtext').style.display = 'block';
-        graphs.forEach(graph => graph.style.display = 'block');
-        maskImage.style.display = 'none';
-        facesContainer.style.display = 'none';
-      } else {
-        merrorText.style.display = 'none';
-        document.querySelector('.subtext').style.display = 'none';
-        graphs.forEach(graph => graph.style.display = 'none');
-        if (index === 1) {
-          maskImage.style.display = 'block';
-          facesContainer.style.display = 'block';
-          changerColor.style.display = 'block';
-        } else {
-          maskImage.style.display = 'none';
-          facesContainer.style.display = 'none';
-          changerColor.style.display = 'none';
-        }
-      }
+      showPage(index + 1); // Pages 1-4
     });
   });
+
+  closeSign.addEventListener('click', () => {
+    showPage(0);
+  });
+
+  function showPage(pageNumber) {
+    document.querySelector('.page-numbers').style.display = pageNumber === 0 ? 'flex' : 'none';
+    
+    closeSign.style.display = pageNumber === 0 ? 'none' : 'block';
+
+    if (pageNumber === 0) {
+      merrorText.style.display = 'flex';
+      document.querySelector('.subtext').style.display = 'block';
+      graphs.forEach(graph => graph.style.display = 'block');
+      maskImage.style.display = 'none';
+      facesContainer.style.display = 'none';
+      mirrorsContainer.style.display = 'none';
+      changerColor.style.display = 'none';
+      borderLeft.style.display = 'none';
+      borderRight.style.display = 'none';
+    } else {
+      merrorText.style.display = 'none';
+      document.querySelector('.subtext').style.display = 'none';
+      graphs.forEach(graph => graph.style.display = 'none');
+      
+      if (pageNumber === 2) {
+        maskImage.style.display = 'none';
+        facesContainer.style.display = 'none';
+        mirrorsContainer.style.display = 'flex';
+        changerColor.style.display = 'none';
+        borderLeft.style.display = 'block';
+        borderRight.style.display = 'block';
+        isShadowCaught = false;
+        startMirrorGame();
+      } else if (pageNumber === 1) {
+        maskImage.style.display = 'block';
+        facesContainer.style.display = 'block';
+        mirrorsContainer.style.display = 'none';
+        changerColor.style.display = 'block';
+        borderLeft.style.display = 'none';
+        borderRight.style.display = 'none';
+      } else {
+        maskImage.style.display = 'none';
+        facesContainer.style.display = 'none';
+        mirrorsContainer.style.display = 'none';
+        changerColor.style.display = 'none';
+        borderLeft.style.display = 'none';
+        borderRight.style.display = 'none';
+      }
+      
+      if (pageNumber !== 2 && gameInterval) {
+        clearInterval(gameInterval);
+        gameInterval = null;
+      }
+    }
+    currentPage = pageNumber;
+  }
 });

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Spray Letters';
+    src: url('../fonts/Spray Letters.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Kommuna';
+    src: url('../fonts/Kommuna-600Regular.ttf') format('truetype');
+}

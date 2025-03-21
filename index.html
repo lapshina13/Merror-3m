@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой проект</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="preload" href="./fonts/Spray Letters.otf" as="font" type="font/otf" crossorigin>
+    <link rel="stylesheet" href="./stylesheets/reset.css">
+    <link rel="stylesheet" href="./stylesheets/fonts.css">
+    <link rel="stylesheet" href="./stylesheets/animation.css">
+    <link rel="stylesheet" href="./stylesheets/layout.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body>
+        <img class="border-left" src="./images/borderLeftPageMirror.svg">
+        <img class="border-right" src="./images/borderRightPageMirror.svg">
         <div id="app">
+           
           <img class="graf1" src="./images/56.svg">
           <img class="graf2" src="./images/59.svg">
           <img class="graf3" src="./images/68.svg">
           <img class="graf4" src="./images/75.svg">
           <img class="mask-image" src="./images/mask.svg">
-          <img class="changer-color" src="./images/changerColor.svg">
+         <img class="changer-color" src="./images/changerColor.svg" style="display: none;">
+         <img class="close-sign" src="./images/closeSign.svg">
+         <div class="mirrors-container">
+           <img class="mirror" src="./images/mirror1.png">
+           <img class="mirror" src="./images/mirror2.png">
+           <img class="mirror" src="./images/mirror3.png">
+           <div class="subtext2">поймай тень в зеркале </div>
+         </div>
           <div class="faces-container">
+           
             <img class="face" src="./images/face1.png">
             <img class="face" src="./images/face2.png">
             <img class="face" src="./images/face3.png">
@@ -30,6 +46,8 @@
             <img class="face" src="./images/face13.png">
             <img class="face" src="./images/face14.png">
             <img class="face" src="./images/face15.png">
+
+             <div class="subtext2">перетащи элементы и создай собственную театральную маску </div>
           </div>
           <div class="merror-text">MERROR</div>
         <div class="subtext">кликни на цифры и погрузись в атмосферу
@@ -41,6 +59,6 @@
             <span>4</span>
         </div>
         </div>
-    <script src="javascripts/main.js"></script>
+    <script src="./javascripts/main.js"></script>
 </body>
 </html>
