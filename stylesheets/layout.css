@@ -1,37 +1,39 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: rgba(231, 231, 231, 1);
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
+  background: rgba(231, 231, 231, 1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 #app {
-    width: 100%;
-    max-width: 1280px;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    min-height: 100vh;
-    overflow: visible;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  min-height: 100vh;
+  overflow: visible;
 }
 
-.graf1, .graf2, .graf3 {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+.graf1,
+.graf2,
+.graf3 {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
 }
 
 /*.graf4 {*/
@@ -43,263 +45,305 @@ body {
 /*}*/
 
 .graf4 {
-    position: absolute;
-    left: 50%;
-    height: auto;
-    top: 280px;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  height: auto;
+  top: 280px;
+  transform: translateX(-50%);
 }
 
 .graf2 {
-    right: 0;
-    top: 0;
+  right: 0;
+  top: 0;
 }
 
 .graf3 {
-    right: 0;
-    top: 300px;
+  right: 0;
+  top: 300px;
 }
 
 .graf1 {
-    left: 0;
-    top: 100px;
+  left: 0;
+  top: 100px;
 }
 
 .merror-text {
-    font-family: 'Spray Letters';
-    font-size: 500px;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
+  font-family: "Spray Letters";
+  font-size: 388px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
 }
 
 .merror-text span {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .subtext {
-    text-align: left;
-    font-size: 30px;
-    color: #333;
-    white-space: pre-line;
-    font-family: 'Kommuna';
-    margin-top: 494px;
-    opacity: 1;
+  text-align: left;
+  font-size: 30px;
+  color: #333;
+  white-space: pre-line;
+  font-family: "Kommuna";
+  margin-top: 494px;
+  opacity: 1;
+  line-height: 20px;
 }
 
-.subtext2{
-    text-align: left;
-    font-size: 30px;
-    color: #333;
-    position: absolute;
-    top: 40px;
-    left:-120px;
-    font-family: 'Kommuna';
-    opacity: 1;
+.subtext2 {
+  text-align: left;
+  font-size: 30px;
+  color: #333;
+  position: absolute;
+  top: 40px;
+  left: -120px;
+  font-family: "Kommuna";
+  opacity: 1;
 }
-.subtextSpecial{
-    left: -25px !important;
+.subtextSpecial {
+  left: -25px !important;
 }
 .mirrors-container {
-    width: 100%;
-    display: none;
-    justify-content: space-evenly;
-    margin-top: 140px;
+  width: 100%;
+  display: none;
+  justify-content: space-evenly;
+  margin-top: 140px;
 }
 
 .mirror {
-    max-width: 30%;
-    height: auto;
+  max-width: 30%;
+  height: auto;
 }
 
-.mirror:first-child{
-    width: 257px;
-    height: 482px;
+.mirror:first-child {
+  width: 257px;
+  height: 482px;
 }
 
-.mirror:nth-child(2){
-    width: 135px;
-    height: 472px;
+.mirror:nth-child(2) {
+  width: 135px;
+  height: 472px;
 }
 
-.mirror:nth-child(3){
-    width: 258px;
-    height: 489px;
+.mirror:nth-child(3) {
+  width: 258px;
+  height: 489px;
 }
 
 .page-numbers {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    display: flex;
-    gap: 20px;
-    font-family: 'Kommuna';
-    font-size: 24px;
-    opacity: 1;
-    z-index: 10;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  gap: 20px;
+  font-family: "Kommuna";
+  font-size: 24px;
+  opacity: 1;
+  z-index: 10;
 }
 
 .page-numbers span {
-    cursor: pointer;
-    transition: opacity 0.3s;
-    color: #000000;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  color: #000000;
 }
 
 .page-numbers span:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .mask-image {
-    position: absolute;
-    top: 160px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    display: none;
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: none;
 }
 
 .changer-color {
-    position: fixed;
-    bottom: 130px;
-    right: 150px;
-    cursor: pointer;
-    display: none;
-    z-index: 10;
+  position: fixed;
+  bottom: 130px;
+  right: 150px;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
 }
 
 .close-sign {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    display: none;
-    z-index: 1000;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
 }
 
 .faces-container {
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    height: 100vh;
-    display: none;
-    overflow: visible;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  display: none;
+  overflow: visible;
 }
 
 .face {
-    position: absolute;
-    display: block;
-    cursor: move;
-    user-select: none;
-    z-index: 1;
-    transition: opacity 0.2s ease;
-    overflow: visible;
-    width: 180px;
-    height: auto;
+  position: absolute;
+  display: block;
+  cursor: move;
+  user-select: none;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+  overflow: visible;
+  width: 180px;
+  height: auto;
 }
 
-.face:nth-child(1) { top: 121px; left: -111px; }
-.face:nth-child(2) { top: 160px; left: 100px; }
-.face:nth-child(3) { top: 240px; left: -100px; }
-.face:nth-child(4) { top: 380px; left: 100px; }
-.face:nth-child(5) { top: 450px; left: -105px; }
-.face:nth-child(6) { top: 510px; left: 100px; }
-.face:nth-child(7) { top: 609px; left: -65px; }
-.face:nth-child(8) { top: 580px; left: 228px; }
-.face:nth-child(9) { top: 290px; right: 50px; }
-.face:nth-child(15) { top: 97px; right: -123px; }
-.face:nth-child(10) { top: 420px; right: 150px; }
-.face:nth-child(11) { top: 379px; right: -115px; }
-.face:nth-child(12) { top: 480px; right: 150px; }
-.face:nth-child(13) { top: 661px; right: 36px; }
-.face:nth-child(14) { top: 610px; right: 300px; }
+.face:nth-child(1) {
+  top: 121px;
+  left: -111px;
+}
+.face:nth-child(2) {
+  top: 160px;
+  left: 100px;
+}
+.face:nth-child(3) {
+  top: 240px;
+  left: -100px;
+}
+.face:nth-child(4) {
+  top: 380px;
+  left: 100px;
+}
+.face:nth-child(5) {
+  top: 450px;
+  left: -105px;
+}
+.face:nth-child(6) {
+  top: 510px;
+  left: 100px;
+}
+.face:nth-child(7) {
+  top: 609px;
+  left: -65px;
+}
+.face:nth-child(8) {
+  top: 580px;
+  left: 228px;
+}
+.face:nth-child(9) {
+  top: 290px;
+  right: 50px;
+}
+.face:nth-child(15) {
+  top: 97px;
+  right: -123px;
+}
+.face:nth-child(10) {
+  top: 420px;
+  right: 150px;
+}
+.face:nth-child(11) {
+  top: 379px;
+  right: -115px;
+}
+.face:nth-child(12) {
+  top: 480px;
+  right: 150px;
+}
+.face:nth-child(13) {
+  top: 661px;
+  right: 36px;
+}
+.face:nth-child(14) {
+  top: 610px;
+  right: 300px;
+}
 
 .border-left,
 .border-right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
 }
 
 .border-left {
-    left: 0px;
+  left: 0px;
 }
 
 .border-right {
-    right: 0px;
+  right: 0px;
 }
 
 .poster-page {
-    background: black;
-    min-height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    padding: 40px;
-    z-index: 999;
-    overflow-x: hidden;
+  background: black;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 40px;
+  z-index: 999;
+  overflow-x: hidden;
 }
 
 .poster-title {
-    color: white;
-    font-family: 'Kommuna';
-    font-size: 24px;
-    margin-bottom: 40px;
-    text-align: left;
-    padding-left: 0px;
+  color: white;
+  font-family: "Kommuna";
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: left;
+  padding-left: 0px;
 }
 
 .posters-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .poster-wrapper {
-    position: relative;
-    width: 30%;
-    display: block;
+  position: relative;
+  width: 30%;
+  display: block;
 }
 
-
 .poster-wrapper .face5-overlay {
-    position: absolute;
-    top: 12%;
-    left: 15%;
-    width: 70%;
-    height: auto;
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  width: 70%;
+  height: auto;
 }
 
 .poster-wrapper .face3-overlay {
-    position: absolute;
-    top: 40%;
-    left: -10%;
-    width: 70%;
-    height: auto;
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  width: 70%;
+  height: auto;
 }
 
 .poster-wrapper .faceposter3-overlay {
-    position: absolute;
-    top: 44%;
-    left: 32%;
-    width: 15%;
-    height: auto;
+  position: absolute;
+  top: 44%;
+  left: 32%;
+  width: 15%;
+  height: auto;
 }
-
-
-
 
 /*.poster-wrapper .face5-overlay {*/
 /*    position: absolute;*/
@@ -325,108 +369,110 @@ body {
 /*    height: auto;*/
 /*}*/
 
-
-
-
-
 .poster {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .poster-input {
-    position: absolute;
-    background: white;
-    border: none;
-    color: black;
-    font-family: 'Spray Letters';
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-    outline: none;
-    padding: 5px;
+  position: absolute;
+  background: white;
+  border: none;
+  color: black;
+  font-family: "Spray Letters";
+  font-size: 36px;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  padding: 5px;
 }
 
 .poster-wrapper:nth-child(1) .poster-input {
-    top: 74%;
-    left: 0;
+  top: 74%;
+  left: 0;
 }
 
 .poster-wrapper:nth-child(2) .poster-input {
-    top: 25%;
-    left: 0;
+  top: 25%;
+  left: 0;
 }
 
 .poster-wrapper:nth-child(3) .poster-input {
-    top: 85%;
-    left: 0;
+  top: 85%;
+  left: 0;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.3); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .drawing-page {
-    background: black;
-    min-height: 100vh;
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    padding: 40px;
-    z-index: 999;
-    overflow-x: hidden;
+  background: black;
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 40px;
+  z-index: 999;
+  overflow-x: hidden;
 }
 
 .mobile-nav {
-    display: none;
-    position: fixed;
-    bottom: 40px;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    padding: 0 20px;
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
 }
 
 .nav-btn {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .drawing-title {
-    color: white;
-    font-family: 'Kommuna';
-    font-size: 24px;
-    text-align: left;
-    padding-left: 0px;
+  color: white;
+  font-family: "Kommuna";
+  font-size: 24px;
+  text-align: left;
+  padding-left: 0px;
 }
 
 .draw-list {
-    position: absolute;
-    top: calc(50% + 100px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 900px;
-    height: auto;
-    max-height: 650px;
-    z-index: 1;
+  position: absolute;
+  top: calc(50% + 100px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  max-height: 650px;
+  z-index: 1;
 }
 
 #drawingCanvas {
-    position: absolute;
-    top: calc(50% + 100px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 70%;
-    max-width: 900px;
-    height: auto;
-    max-height: 650px;
-    pointer-events: auto;
+  position: absolute;
+  top: calc(50% + 100px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 70%;
+  max-width: 900px;
+  height: auto;
+  max-height: 650px;
+  pointer-events: auto;
 }
