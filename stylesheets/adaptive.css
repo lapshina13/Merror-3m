@@ -496,10 +496,10 @@
 }
 
 @media screen and (max-width: 414px) {
-    #app img[src*="shatered.svg"] {
-        width: 300px;
+    .app, .drawing-page, .poster-page, .page-numbers, .faces-container{
+        overflow-x: hidden;
     }
-
+    
     #app {
         overflow-y: visible;
         min-height: 100vh;
@@ -526,19 +526,19 @@
     .graf1 {
         left: -100px;
         top: -100px;
-        max-width: 330px;
+        max-width: 80%;
     }
 
     .graf2 {
         right: 0;
         top: 0;
-        max-width: 150px;
+        max-width: 50%;
     }
 
     .graf3 {
         right: -127px;
         top: 138px;
-        max-width: 229px;
+        max-width: 56%;
     }
     br{
         display: none;
@@ -546,7 +546,7 @@
     .graf4 {
         right: 0;
         top: 190px;
-        max-width: 170px;
+        max-width: 65%;
     }
 
     .subtext {
@@ -578,7 +578,7 @@
     .mask-image {
         top: 394px;
         transform: translate(-55%, -5px);
-        width: 400px;
+        width: 100%;
     }
     .face:nth-child(8) {
         top: 853px;
@@ -730,29 +730,29 @@
 }
 
 @media screen and (max-width: 360px) {
-    #app img[src*="shatered.svg"] {
-        width: 260px;
+    .app, .drawing-page, .poster-page, .page-numbers, .faces-container{
+        overflow-x: hidden;
     }
-
     .graf1 {
         left: 0;
-        max-width: 135px;
+        max-width: 38%;
+        top: 0;
     }
 
     .graf2 {
         right: 0;
-        max-width: 125px;
+        max-width: 38%;
     }
 
     .graf3 {
         right: 0;
-        max-width: 140px;
+        max-width: 38%;
     }
 
     .graf4 {
-        max-width: 120px;
+        max-width: 37%;
         left: 50%;
-        top: 200px;
+        top: 120px;
     }
 
     .page-numbers {
@@ -769,7 +769,7 @@
 
     .subtext {
         font-size: 14px;
-        margin-top: 220px;
+        margin-top: 320px;
     }
 
     .subtext2 {
@@ -777,7 +777,7 @@
     }
 
     .mask-image {
-        top: 130px;
-        transform: translate(-50%, 0%) scale(0.45);
+        top: 430px;
     }
+
 }
