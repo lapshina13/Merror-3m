@@ -1,95 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой проект</title>
-    <link rel="preload" href="./fonts/Spray Letters.otf" as="font" type="font/otf" crossorigin>
-    <link rel="stylesheet" href="./stylesheets/reset.css">
-    <link rel="stylesheet" href="./stylesheets/fonts.css">
-    <link rel="stylesheet" href="./stylesheets/animation.css">
-    <link rel="stylesheet" href="./stylesheets/layout.css">
-  <link rel="stylesheet" href="./stylesheets/style.css">
-</head>
-<body>
-        <img class="border-left" src="./images/borderLeftPageMirror.svg">
-        <img class="border-right" src="./images/borderRightPageMirror.svg">
-        <div id="app">
-           
-          <img class="graf1" src="./images/56.png">
-          <img class="graf2" src="./images/59.png">
-          <img class="graf3" src="./images/68.png">
-          <img class="graf4" src="./images/75.svg">
-          <img class="mask-image" src="./images/mask.png">
-         <img class="changer-color" src="./images/changerColor.svg" style="display: none;">
-         <img class="close-sign" src="./images/closeSign.svg">
-         <div class="mirrors-container">
-           <img class="mirror" src="./images/mirror1.png">
-           <img class="mirror" src="./images/mirror2.png">
-           <img class="mirror" src="./images/mirror3.png">
-           <div class="subtext2 subtextSpecial">поймай тень в зеркале </div>
-         </div>
-          <div class="faces-container">
-           
-            <img class="face" src="./images/face1.png">
-            <img class="face" src="./images/face2.png">
-            <img class="face" src="./images/face3.png">
-            <img class="face" src="./images/face4.png">
-            <img class="face" src="./images/face5.png">
-            <img class="face" src="./images/face6.png">
-            <img class="face" src="./images/face7.png">
-            <img class="face" src="./images/face8.png">
-            <img class="face" src="./images/face9.png">
-            <img class="face" src="./images/face10.png">
-            <img class="face" src="./images/face11.png">
-            <img class="face" src="./images/face12.png">
-            <img class="face" src="./images/face13.png">
-            <img class="face" src="./images/face14.png">
-            <img class="face" src="./images/face15.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheatreMerror</title>
+    <link
+      rel="preload"
+      href="./fonts/Spray Letters.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+  </head>
+  <body>
+    <img class="border-left" src="./images/borderLeftPageMirror.svg" />
+    <img class="border-right" src="./images/borderRightPageMirror.svg" />
+    <div id="app">
+      <img class="graf1" src="./images/56.png" />
+      <img class="graf2" src="./images/59.png" />
+      <img class="graf3" src="./images/68.png" />
+      <img class="graf4" src="./images/75.svg" />
+      <img class="mask-image" src="./images/mask.png" />
+      <img
+        class="changer-color"
+        src="./images/changerColor.svg"
+        style="display: none"
+      />
+      <img class="close-sign" src="./images/closeSign.svg" />
+      <div class="mirrors-container">
+        <img class="mirror" src="./images/mirror1.png" />
+        <img class="mirror" src="./images/mirror2.png" />
+        <img class="mirror" src="./images/mirror3.png" />
+        <div class="subtext2 subtextSpecial">поймай тень в зеркале</div>
+      </div>
+      <div class="faces-container">
+        <img class="face" src="./images/face1.png" />
+        <img class="face" src="./images/face2.png" />
+        <img class="face" src="./images/face3.png" />
+        <img class="face" src="./images/face4.png" />
+        <img class="face" src="./images/face5.png" />
+        <img class="face" src="./images/face6.png" />
+        <img class="face" src="./images/face7.png" />
+        <img class="face" src="./images/face8.png" />
+        <img class="face" src="./images/face9.png" />
+        <img class="face" src="./images/face10.png" />
+        <img class="face" src="./images/face11.png" />
+        <img class="face" src="./images/face12.png" />
+        <img class="face" src="./images/face13.png" />
+        <img class="face" src="./images/face14.png" />
+        <img class="face" src="./images/face15.png" />
 
-             <div class="subtext2">перетащи элементы и создай собственную театральную маску </div>
+        <div class="subtext2">
+          перетащи элементы и создай собственную театральную маску
+        </div>
+      </div>
+      <div class="merror-text">MERROR</div>
+      <div class="subtext">
+        кликни на цифры и погрузись в атмосферу <br />
+        театра разбитых зеркал
+      </div>
+      <div class="page-numbers">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+      </div>
+      <div class="poster-page">
+        <div class="poster-title">
+          помоги придумать название для будущей постановки<br />
+          <span class="mobileMargin"
+            ><div>печатай на английской раскладке</div></span
+          >
+        </div>
+        <div class="mobile-nav">
+          <img
+            src="./images/left.svg"
+            class="nav-btn prev-btn"
+            alt="Previous"
+          />
+          <img src="./images/right.svg" class="nav-btn next-btn" alt="Next" />
+        </div>
+        <div class="posters-container">
+          <div class="poster-wrapper">
+            <img src="./images/poster1.png" class="poster" alt="Poster 1" />
+            <img src="./images/face5.png" class="face5-overlay" />
+            <input type="text" class="poster-input" />
           </div>
-          <div class="merror-text">MERROR</div>
-        <div class="subtext">кликни на цифры и погрузись  в атмосферу <br> театра разбитых зеркал</div>
-        <div class="page-numbers">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-        </div>
-        <div class="poster-page">
-          <div class="poster-title">помоги придумать название для будущей постановки<br>
-              <span class="mobileMargin"><div>печатай на английской раскладке</div></span></div>
-          <div class="mobile-nav">
-            <img src="./images/left.svg" class="nav-btn prev-btn" alt="Previous">
-            <img src="./images/right.svg" class="nav-btn next-btn" alt="Next">
+          <div class="poster-wrapper">
+            <img src="./images/poster2.png" class="poster" alt="Poster 2" />
+            <img src="./images/face3.png" class="face3-overlay" />
+
+            <input type="text" class="poster-input" />
           </div>
-          <div class="posters-container">
-            <div class="poster-wrapper">
-              <img src="./images/poster1.png" class="poster" alt="Poster 1">
-              <img src="./images/face5.png" class="face5-overlay">
-              <input type="text" class="poster-input">
-            </div>
-            <div class="poster-wrapper">
-              <img src="./images/poster2.png" class="poster" alt="Poster 2">
-              <img src="./images/face3.png" class="face3-overlay">
-              
-              <input type="text" class="poster-input">
-              
-            </div>
-            <div class="poster-wrapper">
-              <img src="./images/poster3.png" class="poster" alt="Poster 3">
-              <img src="./images/faceposter3.png" class="faceposter3-overlay">
-              <input type="text" class="poster-input">
-            </div>
+          <div class="poster-wrapper">
+            <img src="./images/poster3.png" class="poster" alt="Poster 3" />
+            <img src="./images/faceposter3.png" class="faceposter3-overlay" />
+            <input type="text" class="poster-input" />
           </div>
         </div>
-        <div class="drawing-page">
-          <div class="drawing-title">театр-место для фантазии, рисуй все, что хочешь!</div>
-          <img src="./images/drawList.png" class="draw-list" alt="Drawing List">
-          <canvas id="drawingCanvas"></canvas>
+      </div>
+      <div class="drawing-page">
+        <div class="drawing-title">
+          театр-место для фантазии, рисуй все, что хочешь!
         </div>
-        </div>
+        <img src="./images/drawList.png" class="draw-list" alt="Drawing List" />
+        <canvas id="drawingCanvas"></canvas>
+      </div>
+    </div>
     <script src="./javascripts/main.js"></script>
-</body>
+  </body>
 </html>
