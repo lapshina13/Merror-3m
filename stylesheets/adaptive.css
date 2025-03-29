@@ -496,10 +496,7 @@
 }
 
 @media screen and (max-width: 414px) {
-    .app, .drawing-page, .poster-page, .page-numbers, .faces-container{
-        overflow-x: hidden;
-    }
-    
+
     #app {
         overflow-y: visible;
         min-height: 100vh;
@@ -730,9 +727,6 @@
 }
 
 @media screen and (max-width: 360px) {
-    .app, .drawing-page, .poster-page, .page-numbers, .faces-container{
-        overflow-x: hidden;
-    }
     .graf1 {
         left: 0;
         max-width: 38%;
@@ -779,5 +773,4 @@
     .mask-image {
         top: 430px;
     }
-
 }

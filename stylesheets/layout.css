@@ -91,6 +91,7 @@ body {
 .subtext {
   text-align: left;
   font-size: 30px;
+  line-height: 25px;
   color: #333;
   white-space: pre-line;
   font-family: "Kommuna";
